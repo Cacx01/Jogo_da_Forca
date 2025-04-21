@@ -1,6 +1,6 @@
 import random
 
-from english_words import english_words_lower_alpha_set
+from english_words import get_english_words_set
 
 
 # Vai mostrando as letras.
@@ -19,10 +19,10 @@ def teste():
 
 def jogo():
     print("  ____  _____  ___  _____    ____    __      ____  _____  ____   ___    __   ")
-    print(" (_  _)(  _  )/ __)(  _  )  (  _ \  /__\    ( ___)(  _  )(  _ \ / __)  /__\  ")
-    print(".-_)(   )(_)(( (_-. )(_)(    )(_) )/(__)\    )__)  )(_)(  )   /( (__  /(__)\ ")
-    print("\____) (_____)\___/(_____)  (____/(__)(__)  (__)  (_____)(_)\_) \___)(__)(__)")
-    word = random.choice([*english_words_lower_alpha_set])
+    print(" (_  _)(  _  )/ __)(  _  )  (  _ \\  /__\\    ( ___)(  _  )(  _ \\ / __)  /__\\  ")
+    print(".-_)(   )(_)(( (_-. )(_)(    )(_) )/(__)\\    )__)  )(_)(  )   /( (__  /(__)\\ ")
+    print("\\____) (_____)\\___/(_____)  (____/(__)(__)  (__)  (_____)(_)\\_) \\___)(__)(__)")
+    word = random.choice(list(get_english_words_set(['web2'], alpha=True, lower=True)))
     word_hidden = list("_" * len(word))
     Nerro = 5
     while (Nerro):
@@ -51,7 +51,7 @@ def jogo():
 
         else:
             print("(╯°□°）╯︵ ┻━┻")
-    print("perdeu!")
+    print("Perdeu! A palavra era:", word)
 
 
 if (__name__ == '__main__'):
