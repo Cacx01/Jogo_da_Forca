@@ -40,7 +40,7 @@ def jogo():
                 Nerro = Nerro - 1
         elif (second_state == '2'):
             palavra = input("palavra:")
-            if (palavra in word):
+            if (palavra in word && len(palavra) == len(word)):
                 print("Parabéns !!!!!!!!!1!!!!")
                 exit(1)
             else:
